@@ -1,0 +1,66 @@
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/* Posts and pages */
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 $base__space-unit;
+}
+
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: $base__space-unit 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 $base__space-unit;
+}
+
+.about-section{
+	display:flex;
+	width: 100%;
+}
+
+.about-section-text{
+	display: block;
+	flex-wrap: wrap;
+	padding-left: 50px;
+	padding-right: 35px;
+
+	.about-title{
+		margin: .67em 0 1.25em 0;
+	}
+}
+
+.home-section-text{
+	font-size: 2em;
+}
+
+.home-title-text{
+	font-size: 1.25rem;
+
+	&:before{
+		content:"─ "
+	}
+}
+
+.archive-content{
+	display: block;
+	justify-content: center;
+}

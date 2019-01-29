@@ -1,0 +1,84 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/* Buttons */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: #222;
+    border: 2px solid #0c0;
+    border-radius: 3px;
+    color: #0c0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: .75rem 2.25rem;
+
+	&:hover {
+		border-color: $color__link-hover; 
+	}
+
+	&:active,
+	&:focus {
+		// border-color: #aaa #bbb #bbb;
+		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+		outline: 0;
+	}
+}
+
+/* Fields */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	background-color: #222;
+	border: 2px solid #0c0;
+	border-radius: 3px;  
+
+	&:focus {
+		color: #111;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 3px;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 100%;
+}
+
+
+.submit-a-quote-form{
+
+	p{
+		font-size: 1rem;
+		color: white;
+		margin-bottom: 0;
+	}
+
+	form{
+		margin: $color__site;
+		fill: black;
+	}
+
+	.space-form{
+		width: 400px;
+	}
+
+	.space-form2{
+		width: 680px;
+		height: 90px;
+	}
+}
