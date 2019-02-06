@@ -14,6 +14,7 @@ jQuery(function(){
         }
       }).done(function(response) {
         //Remove content and substitute
+        console.log(response);
         
         jQuery("#phrase").html(response[0].content.rendered);
         jQuery("#author").html(response[0].title.rendered);
@@ -35,3 +36,35 @@ jQuery(function(){
     });
 });
 
+
+
+// Submit a quote
+
+jQuery(document).ready(function($){
+  $( '#submitNewQuote' ).on( 'click', function(event) {
+    event.preventDefault();
+
+    let author = $( '#author' ).val();
+    let quote = $( '#quote' ).val();
+    let sourceQuote = $( '#source-quote' ).val();
+    let sourceQuoteUrl = $( '#source-quote-url' ).val();
+
+    $.ajax({
+        method: 'POST',
+        url: blue_vars.rest_url + "wp/v2/posts",
+        data: {
+          title: author,
+          content: quote,
+          _qod_quote_source: sourceQuote,
+          _qod_quote_source_url: sourceQuoteUrl,
+      },
+        beforeSend: function(xhr) {
+                xhr.setRequestHeader("X-WP-Nonce", blue_vars.wpapi_nonce);
+              }
+    }).done(function(data) {
+      alert("it's working!");
+    }).fail(function(data, status) {
+      console.log("not working");
+    });
+  });  
+});

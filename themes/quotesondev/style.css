@@ -96,7 +96,7 @@ dfn {
   font-style: italic; }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   margin: .67em 0 1.5em 0; }
 
 mark {
@@ -376,6 +376,13 @@ table {
   border-bottom: 1px dotted #fff;
   margin: 50px 0px; }
 
+.nothing-found-msg {
+  font-size: 1rem;
+  height: auto; }
+
+.oops {
+  margin-bottom: 0; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -406,7 +413,8 @@ input[type="submit"] {
   input[type="submit"]:focus {
     -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-    outline: 0; }
+    outline: 0;
+    color: #0c0; }
 
 /* Fields */
 input[type="text"],
@@ -418,13 +426,6 @@ textarea {
   background-color: #222;
   border: 2px solid #0c0;
   border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
-    color: #111; }
 
 input[type="text"],
 input[type="email"],
@@ -437,21 +438,41 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
-.submit-a-quote-form p {
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 0; }
+.submit-a-quote-form {
+  min-width: 680px; }
+  .submit-a-quote-form p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0; }
+  .submit-a-quote-form form {
+    margin: #00cc00;
+    fill: black; }
+  .submit-a-quote-form .space-form {
+    width: 70%; }
+    .submit-a-quote-form .space-form:last-of-type {
+      margin-bottom: 20px; }
+  .submit-a-quote-form .space-form2 {
+    width: 100%; }
+    .submit-a-quote-form .space-form2 input, .submit-a-quote-form .space-form2 select, .submit-a-quote-form .space-form2 textarea {
+      color: #ffffff; }
+    .submit-a-quote-form .space-form2 textarea:focus, .submit-a-quote-form .space-form2 input:focus {
+      color: #ffffff; }
+  .submit-a-quote-form input, .submit-a-quote-form select, .submit-a-quote-form textarea {
+    color: #ffffff; }
+  .submit-a-quote-form textarea:focus, .submit-a-quote-form input:focus {
+    color: #ffffff; }
 
-.submit-a-quote-form form {
-  margin: #00cc00;
-  fill: black; }
+.search-submit {
+  background-color: inherit;
+  border: none;
+  background-size: 5px;
+  padding: 0; }
+  .search-submit .fa-search {
+    font-size: 1rem;
+    line-height: 0; }
 
-.submit-a-quote-form .space-form {
-  width: 400px; }
-
-.submit-a-quote-form .space-form2 {
-  width: 680px;
-  height: 90px; }
+.form-section .home-section-text .about-section-text {
+  min-width: 75%; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -477,7 +498,6 @@ a {
   margin-top: 48px;
   margin-bottom: 72px; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -504,9 +524,10 @@ a {
     position: relative;
     border-right: 1px solid #fff;
     line-height: 1;
-    padding: 0 1rem; }
+    padding: 0 1rem;
+    display: inline-block; }
   .main-navigation a {
-    display: block;
+    display: inline-block;
     text-decoration: none; }
 
 .main-nav-wrapper {
@@ -517,7 +538,7 @@ a {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-  display: block; }
+  display: none; }
 
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -552,7 +573,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 0;
+  padding-right: 0px;
   padding-left: 16px; }
 
 /* Archive section. */
@@ -599,6 +620,9 @@ a {
   font-weight: lighter;
   margin-bottom: .5rem;
   margin-right: 1.5rem; }
+
+.number-pagination a, .number-pagination span {
+  text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -693,7 +717,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .about-section-text {
   display: block;
@@ -702,10 +728,10 @@ a {
   padding-left: 50px;
   padding-right: 35px; }
   .about-section-text .about-title {
-    margin: .67em 0 1.25em 0; }
+    margin: .67rem 0 1.25rem 0; }
 
 .home-section-text {
-  font-size: 2em; }
+  font-size: 1.25rem; }
 
 .home-title-text {
   font-size: 1.25rem; }
@@ -746,7 +772,8 @@ object {
 /* All Archives Page */
 /* Submit a Quote Page */
 .site-footer li:last-child {
-  border: none; }
+  border: none;
+  padding-right: 0px; }
   .site-footer li:last-child::before {
     content: "Brought you by";
     text-decoration: none;

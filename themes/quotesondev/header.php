@@ -30,7 +30,6 @@
 							<img src="<?php echo get_template_directory_uri() . '/images/qod-logo.svg';?>" class="logo" alt="Quotes on Dev logo">
 						</a>
 					</h1>
-					<p class="site-description" style="visibility: hidden"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 			</header><!-- #masthead -->
 
